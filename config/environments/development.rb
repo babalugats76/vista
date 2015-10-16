@@ -41,11 +41,11 @@ Rails.application.configure do
   
   # Configure the Action Mailer
   config.action_mailer.smtp_settings = {
-     :address              => "smtp.virtualave.net",
-     :port                 => 587,
-     :user_name            => "james@colestock.com",
-     :password             => ";y>g2IH?=sk|Z,",
-     :domain               => "colestock.com"
+     :address              => ENV["SMTP_USERNAME"],
+     :port                 => ENV["SMTP_PORT"],
+     :user_name            => ENV["SMTP_USERNAME"],
+     :password             => ENV["SMTP_PASSWORD"],
+     :domain               => ENV["SMTP_DOMAIN"]
   } 
  
 end
