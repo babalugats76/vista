@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vista</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="container">
+     <h1>Welcome to Vista Hardwood Floors</h1>
+  </header>
+  <nav class="container">
+     <ul class="nav nav-tabs">
+         <li><%= link_to "Request a Quote", new_quote_path %></li>
+     </ul>
+  </nav> 
+  <main class="container">
+     <%= yield %>
+  </main>
+
+</body>
+</html>

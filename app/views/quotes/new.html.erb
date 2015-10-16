@@ -1,0 +1,39 @@
+<%= form_for @quote do |q| %>
+  <% if @quote.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@quote.errors.count, "error")} prohibited this message from being sent:" %>
+      </h2>
+
+      <ul>
+        <% @quote.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= q.label :name %>
+    <%= q.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= q.label :email %>
+    <%= q.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= q.label :subject %>
+    <%= q.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= q.label :content %>
+    <%= q.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= q.submit 'Send', class: 'button' %>
+  </div>
+<% end %>
