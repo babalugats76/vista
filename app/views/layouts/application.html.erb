@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Vista</title>
+  <title>Vista Hardwood Floors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,10 +11,24 @@
   <header class="container">
      <h1>Welcome to Vista Hardwood Floors</h1>
   </header>
-  <nav class="container">
-     <ul class="nav nav-tabs">
-         <li><%= link_to "Request a Quote", quote_path %></li>
-     </ul>
+  <nav role="navigation" class="container navbar navbar-default">
+     <div class="fluid-container">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+           </button>
+        </div>  
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <li class="active"><%= link_to "Home", root_path %></li>
+               <li><%= link_to "Request a Quote", quote_path %></li>
+            </ul>
+        </div>
+     </div>
+  <!-- http://www.bootply.com/IsRfOyf0f9 -->
   </nav> 
   <main class="container">
      <%= yield %>

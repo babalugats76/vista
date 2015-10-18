@@ -50,5 +50,7 @@ Rails.application.configure do
      :enable_starttls_auto  => true,
      :openssl_verify_mode   => OpenSSL::SSL::VERIFY_NONE
   } 
+
+  config.assets.compile = true;
  
 end
