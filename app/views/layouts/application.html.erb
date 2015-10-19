@@ -8,10 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="container">
-     <h1>Welcome to Vista Hardwood Floors</h1>
+  <header id="masthead">
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+              <img id="logo" alt="Vista Hardwood Floors Logo" src="https://colestock.s3.amazonaws.com/images/vista-logo-2000x566.png" />
+          </div>
+      </div>
   </header>
-  <nav role="navigation" class="container navbar navbar-default">
+  <nav role="navigation" class="navbar navbar-default">
      <div class="fluid-container">
         <div class="navbar-header">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,6 +37,6 @@
   <main class="container">
      <%= yield %>
   </main>
-
+  <footer></footer>
 </body>
 </html>
