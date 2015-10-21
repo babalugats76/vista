@@ -51,6 +51,6 @@ Rails.application.configure do
      :openssl_verify_mode   => OpenSSL::SSL::VERIFY_NONE
   } 
 
-  config.assets.compile = true;
+  config.assets.compile = false;
  
 end

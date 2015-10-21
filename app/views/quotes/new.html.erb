@@ -24,6 +24,13 @@
                      <%= q.text_field :name, :class => 'form-control' %>
                   </div>
                 </div>
+                
+               <div class="form-group">
+                  <%= q.label :city, :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-10">
+                     <%= q.text_field :city, :class => 'form-control' %>
+                  </div>
+                </div>                
               
                 <div class="form-group">
                   <%= q.label :email, :class => 'col-sm-2 control-label' %>
@@ -33,16 +40,16 @@
                 </div>
               
                 <div class="form-group">
-                  <%= q.label :subject, :class => 'col-sm-2 control-label' %>
+                  <%= q.label :phone, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.text_field :subject, :class => 'form-control' %>
+                     <%= q.telephone_field :phone, :class => 'form-control phone_us' %>
                   </div>
                 </div>
               
                 <div class="form-group">
-                  <%= q.label :content, :class => 'col-sm-2 control-label' %>
+                  <%= q.label :details, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.text_area :content, :class => 'form-control', :rows =>5 %>
+                     <%= q.text_area :details, :class => 'form-control', :rows =>5 %>
                      <p class="help-block">Tell us more about your project, e.g., square footage</p>
                   </div>
                 </div>

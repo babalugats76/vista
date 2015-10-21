@@ -10,12 +10,20 @@
             </section>
             <section id="contact" class="col-md-5 col-lg-4 text-center">
                 <div id="contact-wrapper" class="panel">
-                    <address>
-                       <span id="company">Vista Hardwood Floors</span>
-                       <br>P.O. Box 2495
-                       <br>Evergreen, CO 80437
-                       <br><strong>(303) 902-9403</strong>
-                       <br><a id="email" href="mailto:michael@vistahardwood.com">michael@vistahardwood.com</a>
+                    <address itemscope itemtype="http://schema.org/PostalAddress">
+                       <span itemprop="name" id="company">Vista Hardwood Floors</span>
+                       <br/>
+                       <span itemprop="streetAddress">P.O. Box 2495</span>
+                       <br/>
+                       <span itemprop="addressLocality">Evergreen</span>, 
+                       <span itemprop="addressRegion">CO</span> 
+                       <span itemprop="postOfficeBoxNumber">80437</span>
+                       <span class="hide" itemprop="addressCountry">United States</span>
+                       <a class="hide" itemprop="url" href="http://www.vistahardwood.com"><div itemprop="name"><strong>Vista Hardwood Floors</strong></div>
+</a>
+                       </span><br/><strong itemprop="telephone">(303) 902-9403</strong>
+                       <br/><a id="email" href="mailto:michael@vistahardwood.com">
+                       <span itemprop="email">michael@vistahardwood.com</span></a>
                     </address>
                 </div>
             </section>

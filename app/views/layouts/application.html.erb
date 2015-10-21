@@ -4,9 +4,9 @@
   <title>Vista Hardwood Floors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Sumana', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Josefin+Sans', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Sumana', media: 'all', 'data-turbolinks-track' => false %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Josefin+Sans', media: 'all', 'data-turbolinks-track' => false %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300', media: 'all', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -37,7 +37,7 @@
      </div>
   <!-- http://www.bootply.com/IsRfOyf0f9 -->
   </nav> 
-  <main>
+  <main itemprop="url" content="http://www.vistahardwood.com/">
      <%= yield %>
   </main>
   <footer></footer>
