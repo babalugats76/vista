@@ -7,7 +7,6 @@ $paragraph-font-family: "Josefin Sans",sans-serif;
 $paragraph-font-color: rgba(21, 22, 15, 1);
 
 body {
-    font-family: $primary-font-family;
     background: url('https://colestock.s3.amazonaws.com/images/cream-dust-bg-50x50.png');
 }
 
@@ -16,7 +15,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label {
+    font-family: $primary-font-family;
     color: $primary-color;
 }
 
@@ -29,10 +30,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-section {
-    margin-bottom: 3em;
-}
-
 .navbar {
     background-color: $primary-color;
     margin-bottom: 0;
@@ -42,8 +39,35 @@ section {
     border: 0 none;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: #fff;
+.nav.navbar-nav li a {
+    background-color: #fff;
+}
+
+.nav.navbar-nav li:active a {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    margin: 0 -15px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #fff;
+}
+
+.jumbotron {
+    background-color: #eeeeee;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding: 0;
 }
 
 #masthead {
@@ -59,6 +83,11 @@ section {
     width: 100%;
 }
 
+footer {
+    padding: 3em 0;
+    background-color: $secondary-color;
+}
+
 .firstcharacter {
     float: left;
     color: $tertiary-color;
@@ -70,21 +99,43 @@ section {
     font-family: Georgia;
 }
 
-
-footer {
-    padding: 3em 0;
-    background-color: $secondary-color;
-}
+.margin-top-05 { margin-top: 0.5em; }
+.margin-top-10 { margin-top: 1.0em; }
+.margin-top-15 { margin-top: 1.5em; }
+.margin-top-20 { margin-top: 2.0em; }
+.margin-top-25 { margin-top: 2.5em; }
+.margin-top-30 { margin-top: 3.0em; }
 
 @media (min-width: 768px) {
+    
     .navbar {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 1em;
+        top: 1em;
         border-radius: 0;
         background-color: transparent;
     }
-    section {
-        margin-bottom: 2em;
+    
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        background-color: #000;
+        color: #fff;
+     }
+
+    .nav.navbar-nav li a.btn-round {
+        border-radius: 8px !important;
+        background-color: #000;
+        opacity: .9;
+        padding: 10px 15px;
+        border: 2px solid rgba(100,100,100,.8);
+        margin-left: 10px;
+        color: #fff;
     }
+    
+    .nav.navbar-nav li a.btn-round:hover {
+        opacity: 1;
+        -ms-transform: scale(1.02,1.02);
+        -webkit-transform: scale(1.02,1.02);
+         transform: scale(1.02,1.02);
+    }
+    
 }

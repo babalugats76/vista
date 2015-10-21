@@ -30,14 +30,14 @@
         </div>  
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-               <li class="active"><%= link_to "Home", root_path %></li>
-               <li><%= link_to "Request a Quote", quote_path %></li>
+               <li class="active"><%= link_to "Home", root_path, class: 'btn-round' %></li>
+               <li><%= link_to "Request a Quote", quote_path, class: 'btn-round' %></li>
             </ul>
         </div>
      </div>
   <!-- http://www.bootply.com/IsRfOyf0f9 -->
   </nav> 
-  <main class="container">
+  <main>
      <%= yield %>
   </main>
   <footer></footer>

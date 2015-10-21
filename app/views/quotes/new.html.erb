@@ -1,57 +1,60 @@
-<div class="row">
-   <div class="col-md-offset-2 col-md-8">
-         <%= form_for(@quote, url: quote_path, html: {class: "form-horizontal"}) do |q| %>
-         <h2>Request a Quote</h2>
-         <br>
-          <% if @quote.errors.any? %>
-            <div id="error_explanation">
-              <h2>
-                <%= "#{pluralize(@quote.errors.count, "error")} prohibited this message from being sent:" %>
-              </h2>
-              <ul>
-                <% @quote.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
+<div class="container">
+    <div class="row">
+      <section id="request-quote">
+         <div class="col-md-offset-2 col-md-8">
+               <%= form_for(@quote, url: quote_path, html: {class: "form-horizontal"}) do |q| %>
+               <h2>Request a Quote</h2>
+               <br>
+                <% if @quote.errors.any? %>
+                  <div id="error_explanation">
+                    <h2>
+                      <%= "#{pluralize(@quote.errors.count, "error")} prohibited this message from being sent:" %>
+                    </h2>
+                    <ul>
+                      <% @quote.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                      <% end %>
+                    <ul>
+                  </div>
                 <% end %>
-              <ul>
-            </div>
-          <% end %>
-        
-          <div class="form-group">
-            <%= q.label :name, :class => 'col-sm-2 control-label' %>
-            <div class="col-sm-10">
-               <%= q.text_field :name, :class => 'form-control' %>
-            </div>
+              
+                <div class="form-group">
+                  <%= q.label :name, :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-10">
+                     <%= q.text_field :name, :class => 'form-control' %>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <%= q.label :email, :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-10">
+                     <%= q.email_field :email, :class => 'form-control' %>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <%= q.label :subject, :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-10">
+                     <%= q.text_field :subject, :class => 'form-control' %>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <%= q.label :content, :class => 'col-sm-2 control-label' %>
+                  <div class="col-sm-10">
+                     <%= q.text_area :content, :class => 'form-control', :rows =>5 %>
+                     <p class="help-block">Tell us more about your project, e.g., square footage</p>
+                  </div>
+                </div>
+              
+                <div class="actions">
+                  <div class="col-sm-offset-2 col-sm-10">
+                     <%= q.submit 'Send', class: 'btn btn-submit' %>
+                  </div>
+                </div>
+              <% end %>
+              <br>
           </div>
-        
-          <div class="form-group">
-            <%= q.label :email, :class => 'col-sm-2 control-label' %>
-            <div class="col-sm-10">
-               <%= q.email_field :email, :class => 'form-control' %>
-            </div>
-          </div>
-        
-          <div class="form-group">
-            <%= q.label :subject, :class => 'col-sm-2 control-label' %>
-            <div class="col-sm-10">
-               <%= q.text_field :subject, :class => 'form-control' %>
-            </div>
-          </div>
-        
-          <div class="form-group">
-            <%= q.label :content, :class => 'col-sm-2 control-label' %>
-            <div class="col-sm-10">
-               <%= q.text_area :content, :class => 'form-control', :rows =>5 %>
-               <p class="help-block">Tell us more about your project, e.g., square footage</p>
-            </div>
-          </div>
-        
-          <div class="actions">
-            <div class="col-sm-offset-2 col-sm-10">
-               <%= q.submit 'Send', class: 'btn btn-submit' %>
-            </div>
-          </div>
-        <% end %>
-        <br>
+        </section>
     </div>
 </div>
-
