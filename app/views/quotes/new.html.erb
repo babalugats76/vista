@@ -18,38 +18,38 @@
                   </div>
                 <% end %>
               
-                <div class="form-group">
+                <div class="form-group required">
                   <%= q.label :name, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.text_field :name, :class => 'form-control' %>
+                     <%= q.text_field :name, :class => 'form-control', :required => true %>
                   </div>
                 </div>
                 
-               <div class="form-group">
+               <div class="form-group required">
                   <%= q.label :city, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.text_field :city, :class => 'form-control' %>
+                     <%= q.text_field :city, :class => 'form-control', :required => true %>
                   </div>
                 </div>                
               
-                <div class="form-group">
+                <div class="form-group required">
                   <%= q.label :email, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.email_field :email, :class => 'form-control' %>
+                     <%= q.email_field :email, :class => 'form-control', :required => true %>
                   </div>
                 </div>
               
-                <div class="form-group">
+                <div class="form-group required">
                   <%= q.label :phone, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.telephone_field :phone, :class => 'form-control phone_us' %>
+                     <%= q.telephone_field :phone, :class => 'form-control phone_us', :required => true %>
                   </div>
                 </div>
               
-                <div class="form-group">
+                <div class="form-group required">
                   <%= q.label :details, :class => 'col-sm-2 control-label' %>
                   <div class="col-sm-10">
-                     <%= q.text_area :details, :class => 'form-control', :rows =>5 %>
+                     <%= q.text_area :details, :class => 'form-control', :rows =>5, :required => true %>
                      <p class="help-block">Tell us more about your project, e.g., square footage</p>
                   </div>
                 </div>

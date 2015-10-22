@@ -106,6 +106,10 @@ footer {
 .margin-top-25 { margin-top: 2.5em; }
 .margin-top-30 { margin-top: 3.0em; }
 
+.form-group.required .control-label:after {
+     content:" *";
+}
+
 @media (min-width: 768px) {
     
     .navbar {
