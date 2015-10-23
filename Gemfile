@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 # use figaro for environment variables, e.g., credentials, passwords
 gem 'figaro', '~> 0.7.0'
+# use to add support for recaptcha API
+gem 'recaptcha', '~> 0.4.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
