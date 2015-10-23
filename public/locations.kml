@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Locations for Vista Hardwood Floors.</name>
+		<atom:author>
+			<atom:name>Michael P. Noone</atom:name>
+		</atom:author>
+		<atom:link rel="related" href="http://www.vistahardwood.com" />
+		<Folder>
+			<Placemark>
+				<name><![CDATA[Vista Hardwood Floors]]></name>
+				<address><![CDATA[P.O. Box 2495, Evergreen, CO, 80437, United States]]></address>
+				<description><![CDATA[Vista Hardwood Floors has been serving the Denver, Colorado metro area since 1992. We provide the following services: dustless hardwood floor refinishing, new hardwood flooring installations, as well as hardwood restoration and repair. Call us today for a free quote: (303) 902-9403]]></description>
+				<Point>
+					<coordinates>-105.3199999,39.63,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>

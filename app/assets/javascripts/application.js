@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require turbolinks
 //= require jquery.mask
+//= require analytics
 //= require_tree .
