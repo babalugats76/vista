@@ -7,7 +7,7 @@ $paragraph-font-family: "Josefin Sans",sans-serif;
 $paragraph-font-color: rgba(21, 22, 15, 1);
 
 body {
-    background: url('https://colestock.s3.amazonaws.com/images/cream-dust-bg-50x50.png');
+    /* background: url('http://static.vistahardwood.com/images/cream-dust-bg-50x50.png'); */
 }
 
 h1,
@@ -71,11 +71,17 @@ h2 {
 }
 
 #masthead {
-    background: url('https://colestock.s3.amazonaws.com/images/vista-wood-6-2560x1600.jpg');
+    background: url('http://static.vistahardwood.com/images/dark-wood-2560x1600.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+}
+
+#masthead > .row {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #logo {
@@ -146,7 +152,7 @@ footer {
     
     .navbar {
         position: absolute;
-        right: 1em;
+        right: 2em;
         top: 1em;
         border-radius: 0;
         background-color: transparent;

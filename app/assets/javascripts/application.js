@@ -15,5 +15,5 @@
 //= require bootstrap
 //= require turbolinks
 //= require jquery.mask
-//= require analytics
+//= require jquery.waitforimages
 //= require_tree .
