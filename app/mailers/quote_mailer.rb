@@ -1,7 +1,7 @@
 class QuoteMailer < ApplicationMailer
    default :to => "jamescolestock@gmail.com"
-   def message_me(msg)
-      @msg = msg
-      mail from: @msg.email, subject: @msg.subject, body: @msg.content
+   def rfq_email(quote)
+      @quote = quote
+      mail(from: @quote.email, subject: "Request for Quote from #{@quote.name.split.map(&:capitalize).join(' ')}")
    end
 end

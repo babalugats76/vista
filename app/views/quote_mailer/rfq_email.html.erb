@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body sytle="width:440px;padding:0;margin:0;">
+   <div id="message" style="color: #333333; padding:15px; font-family: Georgia, Times New Roman, Courier; line-height: 1.4; font-size: 16px">
+      <img src="" alt="vista hardwood logo" />
+      <h3 style="padding: 0 2px; margin: 10px 0;">Request for Quote</h3>
+      <hr />
+      <p>Dear <%= #{@quote.name.split.map(&:capitalize).join(' ')} %>,</p>
+      <p>We have received your request for a quote and we will be contacting you shortly to schedule a time to give you an estimate:</p>
+      <table style="margin-left: 20px;">
+         <tr>
+            <td style="font-weight: bold;">Name:</td>
+            <td>
+               <%= @quote.name %>
+            </td>
+         </tr>
+         <tr>
+            <td style="font-weight: bold;">City:</td>
+            <td>
+               <%= @quote.city %>
+            </td>
+         </tr>
+         <tr>
+            <td style="font-weight: bold;">Phone:</td>
+            <td>
+               <%= @quote.phone %>
+            </td>
+         </tr>
+         <tr>
+            <td style="font-weight: bold;">Email:</td>
+            <td><%= @quote.email %></td>
+         </tr>
+         <tr>
+            <td colspan="2"><em><br/><%= @quote.details %><br/ ></em></td>
+         </tr>
+      </table>
+      <p>Thank you for contacting Vista Hardwood Floors.</p>
+      <div style="text-decoration: none;">Vista Hardwood Floors
+         <br/> P.O. Box 2495
+         <br/> Evergreen, CO 80437
+         <br/> (303) 902-9403
+         <br/>
+         <a href="mailto:michael@vistahardwood.com" alt="email us">michael@vistahardwood.com</a>
+         <br/>
+         <a href="http://www.vistahardwood.com" alt="Vista Hardwood Floors">www.vistahardwood.com</a>
+      </div>
+   </div>   
+</body>
+</html>

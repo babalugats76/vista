@@ -6,8 +6,8 @@ class QuotesController < ApplicationController
   def create
      @quote = Quote.new(quote_params)
      if @quote.valid?
-         QuoteMailer.message_me(@quote).deliver_now
-         redirect_to quote_path, notice: "Thank you.  We will be contacting you about your request for a quote soon."
+         QuoteMailer.rfq_email(@quote).deliver_now
+         redirect_to quote_path, :notice => "Thank you.  We will contact you soon about your request for a quote."
      else
          render :new
      end 

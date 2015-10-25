@@ -2,6 +2,7 @@
     <div class="row">
       <section id="request-quote">
          <div class="col-md-offset-2 col-md-8">
+               <% unless (defined?(notice)).nil? %><h4 class="text-danger"><%= notice %></h4><% end %>
                <%= form_for(@quote, url: quote_path, :validate => false, html: {class: "form-horizontal margin-btm-10"}) do |q| %>
                    <h2>Request a Quote</h2>
                    <br>
