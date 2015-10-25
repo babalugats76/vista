@@ -138,7 +138,7 @@
 
           <!-- Full Width, Fluid Column : BEGIN -->
           <tr>
-            <td style="padding: 4%; font-family: sans-serif; font-size: 18px; line-height: 1.3; color: #666666;">
+            <td style="padding: 4% 4% 1%; font-family: sans-serif; font-size: 18px; line-height: 1.3; color: #666666;">
               Hi <%= @quote.name.split.map(&:capitalize).join(' ') %>,
               <br><br>
               We have received your request for a quote and we will be contacting you shortly to setup a time to perform your estimate.
@@ -151,24 +151,24 @@
                 <td style="padding: 1% 4%;">
 					<table cellspacing="0" cellpadding="0" border="0" width="100%" style="">
 						<tr>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
 								City
 							</td>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
 								Phone
 							</td>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
 								Email
 							</td>
 						</tr>
 						<tr>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
 							    <%= @quote.city %>
 							</td>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
 								<%= @quote.phone %>
 							</td>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
 								<a href="mailto:<%= @quote.email %>"><%= @quote.email %></a>
 							</td>
 						</tr>
@@ -182,11 +182,11 @@
                 <td style="padding: 1% 4%;">
 					<table cellspacing="0" cellpadding="0" border="0" width="100%" style="">
 						<tr>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
 								Details
 							</td>
 						<tr>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
+							<td valign="top" align="left" style="padding: 5px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
 							    <%= @quote.details %>
 							</td>
 						</tr>
@@ -216,7 +216,7 @@
       <td style="text-align:center; padding:4% 0; font-family:sans-serif; font-size:13px; line-height:1.2; color:#fff;">
         You received this email because you requested a quote at <a style="color: #fff;" href="http://www.vistaharwood.com">www.vistahardwood.com</a>.
         <br><br>
-        Vista Hardwood Floors &bull; <span class="mobile-link--footer">P.O. Box 2495, Evergreen, CO 80437</span> &bull; <span class="mobile-link--footer">(303) 902-9403</span>
+        Vista Hardwood Floors &bull; <span class="mobile-link--footer">P.O. Box 2495, Evergreen, CO 80437</span> &bull; <span class="mobile-link--footer" style="color: #fff;">(303) 902-9403</span>
         <br><br>
         <a style="color:#fff; text-decoration:underline;"><a style="color: #fff;" href="mailto:michael@vistahardwood.com">micheal@vistahardwood.com</a>
       </td>
