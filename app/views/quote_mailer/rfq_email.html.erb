@@ -117,9 +117,6 @@
         <!-- Logo + Links : BEGIN -->
         <table border="0" width="100%" cellpadding="0" cellspacing="0">
           <tr>
-            <td valign="middle" style="padding:10px 0; text-align:left;" width="150">
-              <img src="http://static.vistaharwood.com/images/bbb-ab-250x150.png" alt="alt text" width="250" height="150" border="0" align="left">
-            </td>
             <td valign="middle" style="padding:10px 0; text-align:right; line-height:1.1; font-family: sans-serif; font-size: 13px; color: #999999;">
               Vista Hardwood Floors - There is a Difference.
             </td>
@@ -141,7 +138,9 @@
           <!-- Full Width, Fluid Column : BEGIN -->
           <tr>
             <td style="padding: 4%; font-family: sans-serif; font-size: 18px; line-height: 1.3; color: #666666;">
-              Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+              Hi <%= @quote.name.split.map(&:capitalize).join(' ') %>,
+              <br>
+              We have received your request for a quote and we will be contacting you shortly to setup a time to perform your estimate.
             </td>
           </tr>
           <!-- Full Width, Fluid Column : END -->
@@ -152,10 +151,12 @@
               <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
                 <tr>
 	                <td width="4%" style="font-size: 0;line-height: 0;">&nbsp;</td>
-                  <td valign="top" width="44%" style="padding: 4% 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #666666; text-align: center;">
-                    <img src="http://placehold.it/160" alt="alt text" height="160" width="160" border="0" align="center">
-                    <br><br>
-                    Mauris urna nibh, dictum quis sollicitudin a, placerat eu ipsum.
+                    <td valign="top" width="44%" style="padding: 4% 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #666666; text-align: center;">
+                    <%= @quote.name.split.map(&:capitalize).join(' ') %>
+                    <%= @quote.city %>
+                    <%= @quote.phone %>
+                    <a href="mailto:<%= @quote.email %>" style="font-size: 100%; font-family: Georgia, Times New Roman, Courier; line-height: 1; color: #15c; text-decoration: none; margin: 0 0 10px; padding: 0;"><%= @quote.email %></a>
+                    <%= @quote.details %>
                     <br><br>
 										<table cellspacing="0" cellpadding="0" border="0" align="center" class="button" style="margin: auto;">
 											<tr>
@@ -252,7 +253,7 @@
     <!-- Footer : BEGIN -->
     <tr>
       <td style="text-align:center; padding:4% 0; font-family:sans-serif; font-size:13px; line-height:1.2; color:#666666;">
-        You received this email because you requested a quote on <a href="http://www.vistaharwood.com">www.vistahardwood.com</a>.
+        You received this email because you requested a quote at <a href="http://www.vistaharwood.com">www.vistahardwood.com</a>.
         <br><br>
         Vista Hardwood Floors &bull; <span class="mobile-link--footer">P.O. Box 2495, Evergreen, CO 80437</span> &bull; <span class="mobile-link--footer">(303) 902-9403</span>
         <br><br>
