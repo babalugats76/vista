@@ -92,7 +92,7 @@
           
   </style>
 </head>
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#431811" style="margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;">
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#222222" style="margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;">
 <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#222222" style="border-collapse:collapse;"><tr><td>
 
 	<!-- Visually Hidden Preheader Text : BEGIN -->
@@ -110,7 +110,7 @@
   <!-- Beginning of Outlook-specific wrapper : END -->
 
   <!-- Email wrapper : BEGIN -->
-  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width:600px; margin:auto;" class="email-container">
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#431811" align="center" style="max-width:600px; margin:auto;" class="email-container">
     <tr>
     	<td>
 
@@ -141,7 +141,7 @@
               Hi <%= @quote.name.split.map(&:capitalize).join(' ') %>,
               <br><br>
               We have received your request for a quote and we will be contacting you shortly to setup a time to perform your estimate.
-              <a href="mailto:<%= @quote.email %>" style="font-size: 100%; font-family: Georgia, Times New Roman, Courier; line-height: 1; color: #15c; text-decoration: none; margin: 0 0 10px; padding: 0;"><%= @quote.email %></a>
+              <a href="mailto:<%= @quote.email %>"><%= @quote.email %></a>
               <%= @quote.details %>
             </td>
           </tr>
@@ -153,30 +153,48 @@
 					<table cellspacing="0" cellpadding="0" border="0" width="100%" style="">
 						<tr>
 							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
-								Name
-							</td>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
 								City
 							</td>
 							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
 								Phone
 							</td>
+							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
+								Email
+							</td>
 						</tr>
 						<tr>
 							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
-							    <%= @quote.name.split.map(&:capitalize).join(' ') %>
-							</td>
-							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
-								<%= @quote.city %>
+							    <%= @quote.city %>
 							</td>
 							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
 								<%= @quote.phone %>
+							</td>
+							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
+								<a href="mailto:<%= @quote.email %>"><%= @quote.email %></a>
 							</td>
 						</tr>
 					</table>
                 </td>
           </tr>	
-		  <!-- Data Table : END -->						
+		  <!-- Data Table : END -->
+		  
+		  <!-- Data Table : BEGIN -->
+          <tr>
+                <td style="padding: 4%;">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" style="">
+						<tr>
+							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; font-weight: bold; border-bottom: 1px solid #cccccc">
+								Details
+							</td>
+						<tr>
+							<td valign="top" align="left" style="padding: 10px 0; font-family: sans-serif; font-size: 15px; line-height: 1.3; color: #333333; border-bottom: 1px solid #eeeeee">
+							    <%= @quote.details %>
+							</td>
+						</tr>
+					</table>
+                </td>
+          </tr>	
+		  <!-- Data Table : END -->		
 
           <!-- Full Width, Fluid Column : BEGIN -->
           <tr>
