@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
   <title>Request for Quote from <%= @quote.name.split.map(&:capitalize).join(' ') %></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <style type="text/css">
+
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
   	/* What it does: Remove spaces around the email design added by some email clients. */
   	/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
@@ -104,7 +105,6 @@
 
 	<!-- Visually Hidden Preheader Text : BEGIN -->
 	<div style="display:none;font-size:1px;color:#222222;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide: all;">
-	    Request for quote received by Vista Hardwood Floors
 	</div>
 	<!-- Visually Hidden Preheader Text : END -->
 
