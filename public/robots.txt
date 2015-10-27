@@ -3,16 +3,6 @@ Disallow: /
 
 User-agent: Googlebot
 Allow: /
-Disallow: /fonts/
-Disallow: /images/
-Disallow: /img/
-Disallow: /js/
-Disallow: /css/
 
 User-agent: msnbot
 Allow: /
-Disallow: /fonts/
-Disallow: /images/
-Disallow: /img/
-Disallow: /js/
-Disallow: /css/

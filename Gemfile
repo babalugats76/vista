@@ -28,6 +28,8 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'figaro', '~> 0.7.0'
 # use to add support for recaptcha API
 gem 'recaptcha', '~> 0.4.0'
+# for SEO 
+gem 'meta-tags'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

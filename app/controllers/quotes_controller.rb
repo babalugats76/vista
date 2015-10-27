@@ -1,5 +1,8 @@
 class QuotesController < ApplicationController
   def new
+     set_meta_tags title: 'Request a Quote',
+              description: 'Complete our contact form to request a quote for your hardwood flooring project',
+              keywords: 'quote, estimate, hardwood, floors, flooring, wood, repair, restore, Denver, vista'
      @quote = Quote.new;
   end
  
