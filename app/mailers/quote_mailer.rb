@@ -1,5 +1,5 @@
 class QuoteMailer < ApplicationMailer
-   default :to => "James Colestock <james@colestock.com>"
+   default :to => "sales@vistahardwood.com"
    default :from => "Vista Hardwood Floors <no-reply@vistahardwood.com>"
    default :reply_to => "no-reply@vistahardwood.com"
    def rfq_email(quote)
