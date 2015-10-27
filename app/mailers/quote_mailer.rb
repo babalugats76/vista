@@ -1,9 +1,9 @@
 class QuoteMailer < ApplicationMailer
-   default :to => "jamescolestock@gmail.com"
-   default :from => "james@colestock.com"
-   default :reply_to => "noreply@colestock.com"
+   default :to => "James Colestock <james@colestock.com>"
+   default :from => "Vista Hardwood Floors <james@colestock.com>"
+   default :reply_to => "no-reply@colestock.com"
    def rfq_email(quote)
       @quote = quote
-      mail(from: @quote.email, cc: @quote.email, subject: "Request for Quote from #{@quote.name.split.map(&:capitalize).join(' ')}")
+      mail(from: @quote.email, cc: '#{@quote.name.split.map(&:capitalize).join(' ')} <#{@quote.email}>', subject: "Request for Quote from #{@quote.name.split.map(&:capitalize).join(' ')}")
    end
 end

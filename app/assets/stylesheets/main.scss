@@ -89,9 +89,24 @@ h2 {
     width: 100%;
 }
 
+#bbb {
+    width: 130px;
+    position: relative;
+}
+
 footer {
-    padding: 3em 0;
+    padding: 1.5em 0;
     background-color: $secondary-color;
+}
+
+footer p {
+    padding: 0 1em;
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+
+footer p, footer p > a, footer p > a:visited, footer p > a:hover {
+    color: #fff;
 }
 
 .firstcharacter {
@@ -178,6 +193,13 @@ footer {
         -ms-transform: scale(1.02,1.02);
         -webkit-transform: scale(1.02,1.02);
          transform: scale(1.02,1.02);
+    }
+    
+    #bbb {
+        width: 130px;
+        position: absolute;
+        left: 1em;
+        top: 0;
     }
     
 }
