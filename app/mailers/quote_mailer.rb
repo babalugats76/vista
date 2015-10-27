@@ -4,6 +4,6 @@ class QuoteMailer < ApplicationMailer
    default :reply_to => "no-reply@colestock.com"
    def rfq_email(quote)
       @quote = quote
-      mail(from: @quote.email, cc: '#{@quote.name.split.map(&:capitalize).join(' ')} <#{@quote.email}>', subject: "Request for Quote from #{@quote.name.split.map(&:capitalize).join(' ')}")
+      mail(cc: "#{@quote.name.split.map(&:capitalize).join(' ')} <#{@quote.email}>", subject: "Request for Quote from #{@quote.name.split.map(&:capitalize).join(' ')}")
    end
 end
