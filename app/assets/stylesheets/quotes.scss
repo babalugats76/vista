@@ -1,3 +1,16 @@
 form#new_quote {
     margin-bottom: 2em;
 }
+
+#request-quote {
+    
+    hr {
+       margin-top: 8px;
+       margin-bottom: 8px;
+    }
+    
+    p:not(.help-text) {
+        font-size: 1.3em;
+    }
+    
+}

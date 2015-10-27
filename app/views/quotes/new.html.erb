@@ -1,11 +1,12 @@
 <div class="container">
     <div class="row">
       <section id="request-quote">
-         <div class="col-md-offset-2 col-md-8">
-               <% unless (defined?(notice)).nil? %><h4 class="text-danger"><%= notice %></h4><% end %>
+         <div class="col-md-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
+               <% unless (defined?(notice)).nil? %><h3 class="notice text-danger"><%= notice %></h3><% end %>
+               <h2>Request a Quote</h2>
+               <hr>
+               <p>Have a hardwood flooring project that you need assistance with?  We would be glad to help, just fill out the form below and we will contact you about your project.</p>
                <%= form_for(@quote, url: quote_path, :validate => false, html: {class: "form-horizontal margin-btm-10"}) do |q| %>
-                   <h2>Request a Quote</h2>
-                   <br>
                     <div class="form-group required <% if @quote.errors.any? && @quote.errors.include?(:name) %>has-error<% end %>">
                       <%= q.label :name, :class => 'col-sm-2 control-label' %>
                       <div class="col-sm-10">
@@ -17,7 +18,6 @@
                          <% end %>
                       </div>
                     </div>
-                    
                    <div class="form-group required <% if @quote.errors.any? && @quote.errors.include?(:city) %>has-error<% end %>">
                       <%= q.label :city, :class => 'col-sm-2 control-label' %>
                       <div class="col-sm-10">
@@ -66,9 +66,12 @@
                          <p class="help-block">Tell us more about your project, e.g., square footage</p>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group <% unless (@recaptcha_error.nil?) %>has-error<% end %>">
                         <div class="col-sm-offset-2 col-sm-10">
                             <%= recaptcha_tags %>
+                            <span class="text-danger">
+                                  <%= @recaptcha_error %>
+                              </span>
                         </div>
                     </div>
                     <%= q.submit 'Send', class: 'btn btn-submit btn-primary col-sm-offset-2' %>

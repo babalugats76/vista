@@ -5,12 +5,20 @@ class QuotesController < ApplicationController
  
   def create
      @quote = Quote.new(quote_params)
-     if @quote.valid?
-         QuoteMailer.rfq_email(@quote).deliver_now
-         redirect_to quote_path, :notice => "Thank you.  We will contact you soon about your request for a quote."
+     
+     @recaptcha =  verify_recaptcha(:model => @post)
+       
+     if(!@recaptcha)
+        @recaptcha_error = "Please complete the reCAPTCHA"
+     end     
+         
+     if @quote.valid? && @recaptcha
+        QuoteMailer.rfq_email(@quote).deliver_now
+        redirect_to quote_path, :notice => "Thank you.  We will contact you soon about your request for a quote."
      else
-         render :new
-     end 
+        render :new
+     end    
+
   end
 
   private 
